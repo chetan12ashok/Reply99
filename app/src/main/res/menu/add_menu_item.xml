@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/addTxtMessage"
+        android:tooltipText="Add Text Message"
+        android:icon="@drawable/ic_message"
+        android:title="Text Message" />
+    <item android:id="@+id/addWpMessage"
+        android:tooltipText="Add Whatsapp Message"
+        android:icon="@drawable/whatsapp_a"
+        android:title="Whatsapp Message" />
+</menu>

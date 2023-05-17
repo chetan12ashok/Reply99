@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/offWhite"
+    tools:context=".fragment.MySettings">
+
+    <TextView
+        android:id="@+id/header"
+        android:text="Message Privacy"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/accent"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="10dp"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Reply when"
+                        android:textColor="@color/accent"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:background="@drawable/ripple_effect"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:id="@+id/cbRejectedMissedCall"
+                        android:text="Missed/Rejected a call"
+                        android:textColor="@color/accent"
+                        android:buttonTint="@color/primary"
+                        android:layout_marginTop="-10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <CheckBox
+                        android:id="@+id/cbIncomingCall"
+                        android:text="Incoming call"
+                        android:textColor="@color/accent"
+                        android:buttonTint="@color/primary"
+                        android:layout_marginTop="-20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <CheckBox
+                        android:id="@+id/cbOutgoingCall"
+                        android:text="Outgoing call"
+                        android:textColor="@color/accent"
+                        android:buttonTint="@color/primary"
+                        android:layout_marginTop="-20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Reply On"
+                        android:textColor="@color/accent"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="15dp"
+                        android:background="@drawable/ripple_effect"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:id="@+id/cbSMS"
+                        android:text="SMS"
+                        android:textColor="@color/accent"
+                        android:buttonTint="@color/primary"
+                        android:layout_marginTop="-20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <CheckBox
+                        android:id="@+id/cbWhatsapp"
+                        android:text="WhatsApp"
+                        android:textColor="@color/accent"
+                        android:buttonTint="@color/primary"
+                        android:layout_marginTop="-20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="SIM"
+                        android:textColor="@color/accent"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="15dp"
+                        android:background="@drawable/ripple_effect"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RadioGroup
+                        android:id="@+id/simRadioGroup"
+                        android:layout_marginTop="-10dp"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id="@+id/simOne"
+                            android:text="SIM 1"
+                            android:textColor="@color/accent"
+                            android:textSize="17sp"
+                            android:layout_marginTop="-5dp"
+                            android:buttonTint="@color/primary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <RadioButton
+                            android:id="@+id/simTwo"
+                            android:text="SIM 2"
+                            android:textColor="@color/accent"
+                            android:textSize="17sp"
+                            android:layout_marginTop="-15dp"
+                            android:layout_marginBottom="10dp"
+                            android:buttonTint="@color/primary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sendMassageOnWACard"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="gone"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:background="@drawable/ripple_effect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/whatsNewBtn"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="2dp"
+                        android:src="@drawable/whatsapp"
+                        app:tint="@color/primary" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchWAReply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-10dp"
+                        android:layout_toRightOf="@id/whatsNewBtn"
+                        android:padding="10dp"
+                        android:text="Enable replies on WhatsApp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contactBaseReplyCard"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="visible"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:background="@drawable/ripple_effect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/enableIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="2dp"
+                        android:src="@drawable/enable"
+                        app:tint="@color/primary" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchForContactBaseReply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-10dp"
+                        android:layout_toRightOf="@id/enableIcon"
+                        android:padding="10dp"
+                        android:text="Enable contact based replies" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/ignoreContactsCard"
+                    android:background="@drawable/ripple_effect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ignoreIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="2dp"
+                        android:src="@drawable/adduser"
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        android:id="@+id/txtIgnoreFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/ignoreIcon"
+                        android:gravity="center"
+                        android:text="Add Contacts"
+                        android:textColor="@color/accent"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ignoreContactsIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtIgnoreFilter"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@id/ignoreIcon"
+                        android:gravity="center"
+                        android:text="No contacts"
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filterContactsCard"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="visible"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:background="@drawable/ripple_effect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/filterContactIcon"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/reply_to"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        android:id="@+id/txtContactFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/filterContactIcon"
+                        android:background="@drawable/ripple_effect"
+                        android:gravity="center"
+                        android:text="Reply to"
+                        android:textColor="@color/accent"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/filterContactIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtContactFilter"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@id/filterContactIcon"
+                        android:background="@drawable/ripple_effect"
+                        android:gravity="center"
+                        android:text="Everyone"
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rulesCard"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:background="@drawable/ripple_effect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ruleIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/reules"
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        android:id="@+id/txtRule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/ruleIcon"
+                        android:background="@drawable/ripple_effect"
+                        android:gravity="center"
+                        android:text="Reply rule for each contact"
+                        android:textColor="@color/accent"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/rulesIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtRule"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@id/ruleIcon"
+                        android:background="@drawable/ripple_effect"
+                        android:gravity="center"
+                        android:text="Once a day"
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/notificationControlerCard"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="visible"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:background="@drawable/ripple_effect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/notifyIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/notification"
+                        app:tint="@color/primary" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/notificationSwitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-10dp"
+                        android:layout_toRightOf="@id/notifyIcon"
+                        android:padding="10dp"
+                        android:text="Notify me when replied" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/settingCard"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="visible"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:background="@drawable/ripple_effect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/settingIcon"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_settings_color"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        android:id="@+id/settingTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/settingIcon"
+                        android:background="@drawable/ripple_effect"
+                        android:gravity="center"
+                        android:text="Setting"
+                        android:textColor="@color/accent"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:visibility="gone"
+        android:layout_below="@id/header"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Whom I can send message automatically."
+            android:textColor="@color/iconTint"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/sendToAll"
+                android:text="Send to all."
+                android:textColor="@color/accent"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/blockToAll"
+                android:text="Block to all."
+                android:textColor="@color/accent"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/sendToOne"
+                android:text="Send to one number in one day."
+                android:textColor="@color/accent"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/sendToOutgoing"
+                android:text="Send to outgoing."
+                android:textColor="@color/accent"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/sendToIncoming"
+                android:text="Send to Incoming."
+                android:textColor="@color/accent"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/sendToMissed"
+                android:text="Send to missed call."
+                android:textColor="@color/accent"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <TextView
+            android:text="Changes to your message privacy setting won't affect messages that you've sent already."
+            android:textColor="@color/iconTint"
+            android:textSize="13dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:layout_below="@id/layout1"
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:visibility="gone"
+        android:layout_below="@id/layout1"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Select the SIM from which you want to send message."
+            android:textColor="@color/iconTint"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioGroup
+
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+
+                android:text="SIM 1"
+                android:textColor="@color/accent"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+
+                android:text="SIM 2"
+                android:textColor="@color/accent"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/layout2"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:backgroundTint="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/changeContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect"
+                android:fontFamily="serif"
+                android:padding="5dp"
+                android:text="Ignore Contacts"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/noOfContacts"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/changeContact"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect"
+                android:fontFamily="serif"
+                android:padding="5dp"
+                android:text="No Contacts"
+                android:textColor="@color/accent"
+                android:textSize="12sp" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

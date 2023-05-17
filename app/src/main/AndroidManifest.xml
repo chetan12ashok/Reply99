@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appdroid.reply99">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <queries>
+
+        <!-- Specific apps Watomatic interacts with. Required for Android 11+ -->
+        <package android:name="com.whatsapp" />
+        <package android:name="com.facebook.orca" />
+        <package android:name="com.facebook.mlite" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WaReply">
+        <activity
+            android:name=".activity.AddWhatsAppMessage"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ConversionActivityForWhatsAppOnly"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ViewAllConvartions"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ContactsList"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TakePermitionFromUser"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MultiLoginDetector"
+            android:exported="false" />
+        <activity
+            android:name=".activity.WackUP"
+            android:exported="true"
+            android:showForAllUsers="true"
+            android:showOnLockScreen="true"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ConversionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddSMSNewMessage"
+            android:exported="false" />
+        <activity
+            android:name=".activity.main.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.Dashboard"
+            android:exported="true" />
+        <activity
+            android:name=".activity.customreplyeditor.CustomReplyEditorActivity"
+            android:exported="true"
+            android:label="@string/mainAutoReplyLabel"
+            android:parentActivityName=".activity.main.MainActivity">
+            <intent-filter android:label="global-auto-reply-message-intent">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "watomatic://auto-reply” -->
+                <data
+                    android:host="auto-reply"
+                    android:scheme="watomatic" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.about.AboutActivity"
+            android:label="@string/about"
+            android:parentActivityName=".activity.main.MainActivity" />
+        <activity
+            android:name=".activity.settings.SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".activity.main.MainActivity" />
+        <activity
+            android:name=".activity.advancedsettings.AdvancedSettingsActivity"
+            android:label="@string/advanced_settings"
+            android:parentActivityName=".activity.settings.SettingsActivity" />
+        <activity
+            android:name=".activity.contactselector.ContactSelectorActivity"
+            android:label="@string/contact_selector"
+            android:parentActivityName=".activity.advancedsettings.AdvancedSettingsActivity" />
+        <activity
+            android:name=".activity.notification.NotificationIntentActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.enabledapps.EnabledAppsActivity"
+            android:label="@string/enabled_apps_title"
+            android:parentActivityName=".activity.main.MainActivity" />
+        <activity
+            android:name=".activity.donation.DonationActivity"
+            android:label="@string/donations_activity_title"
+            android:parentActivityName=".activity.main.MainActivity" />
+
+        <service
+            android:name=".WhatsappAccessibilityService"
+            android:exported="true"
+            android:label="Auto Reply"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/whatsappservice" />
+
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.appdroid.reply99.NotificationService"
+            android:exported="true"
+            android:label="@string/service_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.appdroid.reply99.service.KeepAliveService"
+            android:stopWithTask="false" /> <!-- https://techstop.github.io/android-broadcastreceiver/ -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <receiver
+            android:name="com.appdroid.reply99.receivers.NotificationServiceRestartReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <!-- For HTC devices -->
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".loginActivitys.FlashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".loginActivitys.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MainActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".loginActivitys.OTPActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MainActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".loginActivitys.RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MainActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <receiver
+            android:name=".receivers.SMSUtils"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="SMS_SENT" />
+                <action android:name="SMS_DELIVERED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receivers.AlarmReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.appdroid.reply99.activity.Dashboard" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

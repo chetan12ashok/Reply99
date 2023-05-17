@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:backgroundTint="@color/white"
+    android:elevation="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtRule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ripple_effect"
+            android:text="Reply rule for each contact"
+            android:textColor="@color/accent"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+        <TextView
+            android:text="Use this rule to avoid replying continuously to the same contact."
+            android:textColor="@color/accent"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/ruleIcon"
+            android:layout_below="@id/txtRule"
+            android:background="@drawable/ripple_effect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioGroup
+            android:id="@+id/rulesRadioGroup"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/noRule"
+                android:text="No rule"
+                android:textColor="@color/accent"
+                android:textSize="17sp"
+                android:buttonTint="@color/primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/once"
+                android:text="Once a day"
+                android:textColor="@color/accent"
+                android:textSize="17sp"
+                android:buttonTint="@color/primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/cancel"
+                android:text="Cancel"
+                android:textSize="17sp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:background="@drawable/ripple_effect"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ripple_effect"
+                android:padding="10dp"
+                android:text="Save"
+                android:textColor="@color/primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

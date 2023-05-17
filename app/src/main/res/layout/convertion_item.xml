@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="15dp"
+    android:backgroundTint="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/options"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ripple_effect"
+            android:elevation="10dp"
+            android:src="@drawable/ic_more"
+            app:tint="@color/lightPrimary" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/proPic"
+            android:src="@drawable/ic_user_color"
+            android:layout_margin="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/options"
+            android:layout_toRightOf="@id/proPic"
+            android:fontFamily="serif"
+            android:text="User Name"
+            android:textColor="@color/accent"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact"
+            android:layout_marginTop="-2.5dp"
+            android:layout_toRightOf="@id/proPic"
+            android:fontFamily="serif"
+            android:text="Incoming"
+            android:textSize="13sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:visibility="gone"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/ic_more"
+            app:tint="@color/lightPrimary" />
+
+        <RelativeLayout
+            android:id="@+id/imageLayout"
+            android:layout_below="@id/status"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_asset_47" />
+
+            <ImageView
+                android:id="@+id/playBtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:visibility="gone"
+                android:elevation="2dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/grey_circle"
+                android:src="@drawable/ic_play"
+                app:tint="@color/white" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/massage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageLayout"
+            android:layout_marginTop="-5dp"
+            android:fontFamily="serif"
+            android:justificationMode="inter_word"
+            android:padding="15dp"
+            android:text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown."
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/massage"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="serif"
+            android:text="a min ago"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_below="@id/date"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="-10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/textSuccessCard"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="10dp"
+                    android:background="@color/lightWhite"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/sentIcon1"
+                        android:background="@drawable/green_circle"
+                        android:src="@drawable/check"
+                        android:padding="5dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:tint="@color/white" />
+                    <TextView
+                        android:id="@+id/txtSent1"
+                        android:text="Text Sent."
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/textFailCard"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="10dp"
+                    android:background="@color/lightWhite"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/sentIcon2"
+                        android:background="@drawable/red_circle"
+                        android:src="@drawable/check"
+                        android:padding="5dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:tint="@color/white" />
+                    <TextView
+                        android:id="@+id/txtSent2"
+                        android:text="SMS failed to send"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/whatsAppSuccessCard"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="10dp"
+                    android:background="@color/lightWhite"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/sentIcon3"
+                        android:src="@drawable/whatsapp_color"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"/>
+                    <TextView
+                        android:id="@+id/txtSent3"
+                        android:text="Whatsapp Sent."
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/whatsappFailCard"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="10dp"
+                    android:background="@color/lightWhite"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/sentIcon4"
+                        android:src="@drawable/whatsapp_a"
+                        android:background="@drawable/red_circle"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"/>
+                    <TextView
+                        android:id="@+id/txtSent4"
+                        android:text="Failed whatsapp Sent."
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

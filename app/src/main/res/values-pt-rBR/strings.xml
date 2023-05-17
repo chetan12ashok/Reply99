@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">Sobre</string>
+    <string name="privacy_policy_label">Política de Privacidade</string>
+    <string name="service_name">Monitor de notificações de mensagens recebidas</string>
+    <string name="mainAutoReplyTextPlaceholder">(Resposta personalizada)</string>
+    <string name="mainAutoReplyLabel">Texto de resposta automática</string>
+    <string name="mainAutoReplySwitchOffLabel">Resposta automática desligada</string>
+    <string name="mainAutoReplySwitchOnLabel">Resposta automática ligada</string>
+    <string name="mainAutoReplyEditBtnTooltip">Clique para editar o texto da resposta automática</string>
+    <string name="decline">Recusar</string>
+    <string name="accept">Aceitar</string>
+    <string name="sure">Sim, negar</string>
+    <string name="retry">Tentar de novo</string>
+    <string name="permission_dialog_title">Permissão necessária</string>
+    <string name="permission_dialog_msg">Este App requer a permissão de Acesso à Notificações para funcionar.</string>
+    <string name="permission_dialog_denied_title">Permissão negada</string>
+    <string name="permission_dialog_denied_msg">Sem esta autorização, o App não vai poder responder automaticamente às notificações. Você tem certeza de que quer negar a permissão?</string>
+    <!-- Select apps to auto reply -->
+    <!-- Group chats -->
+    <string name="groupReplySwitchLabel">Resposta automática para chats de grupos</string>
+    <string name="group_reply_on_info_message">Ativada a Resposta Automática para chats de grupos</string>
+    <string name="group_reply_off_info_message">Desativada a Resposta Automática para chats de grupos</string>
+    <string name="time_picker_title">Frequência de resposta (BETA)</string>
+    <string name="time_picker_sub_title_default">Responder a todas as mensagens sem controle</string>
+    <string name="time_picker_sub_title">Responder apenas uma vez a cada %1$d dia(s) para cada pessoa\/grupo</string>
+    <string name="time_picker_edit_btn_tooltip">Clique para editar o tempo de espera entre as respostas</string>
+    <!-- Custom message editor -->
+    <string name="share_app_text">Estou usando Watomatic para me livrar do WhatsApp. Experimente: watomatic.app</string>
+    <string name="share">Compartilhar</string>
+    <string name="share_subject">Watomatic: Respostas Automáticas para WhatsApp</string>
+    <!-- Share debug logs -->
+    <!-- keys and app internal strings -->
+    <!-- app settings -->
+    <!-- Local language names (non translatable) -->
+    <!-- Basque -->
+    <!-- Language codes (non translatable) -->
+    <!-- App Language selection -->
+    <!-- App Rating Dialog -->
+    <!--Autostart Permission Dialog-->
+</resources>

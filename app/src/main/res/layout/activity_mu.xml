@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:gravity="center"
+    tools:context=".activity.MultiLoginDetector">
+
+   <com.airbnb.lottie.LottieAnimationView
+       android:id="@+id/animationView"
+       android:layout_width="350dp"
+       android:layout_height="300dp"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="5dp"
+       app:lottie_rawRes="@raw/alredy_login"
+       app:lottie_autoPlay="true"
+       app:lottie_loop="true"/>
+
+   <TextView
+       android:id="@+id/txt"
+       android:text="Your mobile number has already login on other device. If you are not that user, you can login again."
+       android:textSize="18sp"
+       android:textColor="@color/primaryDark"
+       android:textStyle="bold"
+       android:gravity="center"
+       android:layout_below="@id/animationView"
+       android:layout_margin="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+
+   <Button
+       android:id="@+id/loginAgain"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/txt"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="25dp"
+       android:layout_marginBottom="10dp"
+       android:background="@drawable/register_btn"
+       android:text="LOGIN"
+       android:textAllCaps="false"
+       android:textColor="@color/white"
+       android:textSize="14dp"
+       android:textStyle="bold" />
+
+</LinearLayout>

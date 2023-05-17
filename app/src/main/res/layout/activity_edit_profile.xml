@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offWhite"
+    tools:context=".activity.EditProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:text="Edit Profile"
+            android:textColor="@color/accent"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ripple_effect"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="DONE"
+            android:textAllCaps="true"
+            android:textColor="@color/accent"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/proPic"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:src="@drawable/ic_user_color"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="3dp" />
+
+                <ImageView
+                    android:id="@+id/editPhoto"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignRight="@id/proPic"
+                    android:layout_alignBottom="@id/proPic"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/primary_circle"
+                    android:elevation="10dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_camera"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/nameIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_user_color"
+                    app:tint="@color/primary" />
+                <TextView
+                    android:id="@+id/name"
+                    android:text="Name"
+                    android:textSize="13dp"
+                    android:textColor="@color/accent"
+                    android:layout_toRightOf="@id/nameIcon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/edName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/nameIcon"
+                    android:background="@color/lightWhite"
+                    android:padding="10dp"
+                    android:text="Name"
+                    android:textColor="@color/accent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/edName"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/nameIcon"
+                    android:background="@color/accent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/nameIcona"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_user_color"
+                    app:tint="@color/primary" />
+                <TextView
+                    android:id="@+id/lastName"
+                    android:text="Last Name"
+                    android:textSize="13dp"
+                    android:textColor="@color/accent"
+                    android:layout_toRightOf="@id/nameIcona"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/edLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lastName"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/nameIcona"
+                    android:background="@color/lightWhite"
+                    android:padding="10dp"
+                    android:text="Name"
+                    android:textColor="@color/accent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/edLastName"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/nameIcona"
+                    android:background="@color/accent" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/contactIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_call"
+                    app:tint="@color/primary" />
+                <TextView
+                    android:id="@+id/contact"
+                    android:text="Contact"
+                    android:textSize="13dp"
+                    android:textColor="@color/accent"
+                    android:layout_toRightOf="@id/contactIcon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/edContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/contact"
+                    android:enabled="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/contactIcon"
+                    android:background="@color/lightWhite"
+                    android:padding="10dp"
+                    android:text="+91 123456789"
+                    android:textColor="@color/accent"
+                    android:textSize="16dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/edContact"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/contactIcon"
+                    android:background="@color/accent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/addressIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_mail"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/addressIcon"
+                    android:text="Address"
+                    android:textColor="@color/accent"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/edEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/addressIcon"
+                    android:background="@color/lightWhite"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:text="Email Address"
+                    android:textColor="@color/accent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/edEmailAddress"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/addressIcon"
+                    android:background="@color/accent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:padding="20dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/dobIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_calender"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/dobIcon"
+                    android:text="DOB"
+                    android:textColor="@color/accent"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/edDob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dob"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/dobIcon"
+                    android:background="@color/lightWhite"
+                    android:padding="10dp"
+                    android:text="13/12/1998"
+                    android:textColor="@color/accent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/edDob"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/dobIcon"
+                    android:background="@color/accent" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/changeC"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="10dp">
+                <TextView
+                    android:id="@+id/changeContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ripple_effect"
+                    android:gravity="center"
+                    android:fontFamily="serif"
+                    android:padding="5dp"
+                    android:layout_margin="15sp"
+                    android:text="Tap to Change Contact No."
+                    android:textColor="@color/accent"
+                    android:textSize="16sp" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

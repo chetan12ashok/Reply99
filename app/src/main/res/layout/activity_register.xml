@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".loginActivitys.RegisterActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:text="Let's Get Started!"
+                android:textColor="@color/accent"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Create an account to get started"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:hint="First Name"
+                android:textColorHint="@color/lightPrimary"
+                app:hintAnimationEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@drawable/ic_user_name"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="@color/primary"
+                    android:padding="15dp"
+                    android:textColor="@color/primary"
+                    android:singleLine="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:background="@color/primary"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastNameTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:hint="Last Name"
+                android:textColorHint="@color/lightPrimary"
+                android:layout_marginRight="10dp"
+                app:hintAnimationEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@drawable/ic_name"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="@color/primary"
+                    android:padding="15dp"
+                    android:textColor="@color/primary"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:background="@color/primary"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="10dp"
+                android:hint="Email ID"
+                android:textColorHint="@color/lightPrimary"
+                app:hintAnimationEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@drawable/ic_mail"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="@color/primary"
+                    android:inputType="textEmailAddress"
+                    android:padding="15dp"
+                    android:textColor="@color/primary"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:background="@color/primary"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <RelativeLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icon_call"
+                    android:layout_width="24dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ic_call"
+                    app:tint="@color/primary" />
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/icon_call"
+                    app:ccp_contentColor="@color/primary"
+                    app:ccp_showFlag="false"
+                    app:ccp_showNameCode="true" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/contactTextField"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-15dp"
+                    android:layout_toRightOf="@id/ccp"
+                    android:layout_marginRight="20dp"
+                    android:hint="Mobile Number"
+                    android:textColorHint="@color/lightPrimary"
+                    app:hintAnimationEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mobNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:padding="15dp"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:textColor="@color/primary"
+                        android:textSize="16dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_below="@id/contactTextField"
+                    android:background="@color/primary"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dobTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="10dp"
+                android:hint="DOB (dd/mm/yyyy)"
+                android:textColorHint="@color/lightPrimary"
+                app:hintAnimationEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@drawable/ic_calender"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="@color/primary"
+                    android:maxLength="10"
+                    android:inputType="date"
+                    android:padding="15dp"
+                    android:textColor="@color/primary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:background="@color/primary"
+                android:visibility="gone"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <RelativeLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="10dp"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icon_calender"
+                    android:layout_width="24dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_calender"
+                    app:tint="@color/primary" />
+
+                <com.mikhaellopez.lazydatepicker.LazyDatePicker
+                    android:id="@+id/lazyDatePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/icon_calender"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    app:ldp_text_color="@color/primary"
+                    app:ldp_hint_color="@color/lightPrimary"
+                    app:ldp_date_format="mm-dd-yyyy" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/lazyDatePicker"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/primary" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="175dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/register_btn"
+                android:elevation="10dp"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/loginTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ripple_effect"
+                android:textColor="@color/grey" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

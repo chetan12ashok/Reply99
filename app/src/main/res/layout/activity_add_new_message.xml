@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/offWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddSMSNewMessage">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/header"
+            android:text="Add New Message"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/accent"
+            android:padding="15dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ripple_effect"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="DONE"
+            android:textAllCaps="true"
+            android:textColor="@color/accent"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/whatsappImageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/selectImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/grey_circle"
+                android:src="@drawable/ic_add"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/txtSelectImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/selectImage"
+                android:text="Tap add icon to select image from gallery."
+                android:textColor="@color/accent"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageSelected"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/selectImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/selectImage"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_asset_47"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iconMessage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/whatsappImageLayout"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_message"
+            app:tint="@color/grey" />
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:layout_below="@id/whatsappImageLayout"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toRightOf="@id/iconMessage"
+            android:background="@drawable/grey_border"
+            android:gravity="start"
+            android:hint="Enter message"
+            android:padding="15dp"
+            android:textColor="@color/accent"
+            android:textColorHint="@color/grey"
+            android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/characterNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:text="Massage length : 0"
+        android:textColor="@color/accent"
+        android:textSize="13dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/characterNumber"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select to whom you can send this message automatically."
+            android:textColor="@color/accent"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/sendToAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary"
+                android:text="Send to all."
+                android:textColor="@color/accent" />
+
+            <RadioButton
+                android:id="@+id/blockToAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary"
+                android:text="Block to all."
+                android:textColor="@color/accent"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/sendToOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary"
+                android:text="Send to one number in one day."
+                android:textColor="@color/accent"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/sendToOutgoing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary"
+                android:text="Send to outgoing."
+                android:textColor="@color/accent" />
+
+            <RadioButton
+                android:id="@+id/sendToIncoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary"
+                android:text="Send to Incoming."
+                android:textColor="@color/accent" />
+
+            <RadioButton
+                android:id="@+id/sendToMissed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary"
+                android:text="Send to missed call."
+                android:textColor="@color/accent" />
+        </RadioGroup>
+
+    </LinearLayout>
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+

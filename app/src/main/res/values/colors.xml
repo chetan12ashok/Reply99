@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_500">#9e9e9e</color>
+    <color name="gray_900">#1d1d1d</color>
+    <color name="gray_800">#3e3e3e</color>
+    <color name="blue_500">#0192ea</color>
+    <color name="blue_700">#0071ca</color>
+    <color name="blue_800">#0061b8</color>
+    <color name="blue_900">#004399</color>
+    <color name="blue_gray_800">#37474f</color>
+    <color name="blue_gray_900">#263238</color>
+
+        <color name="purple_200">#FFBB86FC</color>
+        <color name="purple_500">#007DEC</color>
+        <color name="purple_700">#004A8C</color>
+        <color name="teal_200">#007DEC</color>
+        <color name="teal_700">#FF018786</color>
+        <color name="black">#FF000000</color>
+        <color name="white">#FFFFFFFF</color>
+        <color name="lightWhite">#FAFAFA</color>
+        <color name="offWhite">#F5F5F5</color>
+
+        <color name="primary">#007DEC</color>
+        <color name="primaryDark">#004A8C</color>
+        <color name="accent">#121E29</color>
+        <color name="iconTint">#616E72</color>
+        <color name="grey">#8F8F8F</color>
+        <color name="transparent">#00FFFFFF</color>
+        <color name="lightPrimary">#AEC6D1</color>
+    <color name="lessPrimary">#80AEC6D1</color>
+
+    <color name="primaryFix">#1C5F7F</color>
+    <color name="highlight">#D7F2FF</color>
+    <color name="background">#F8F8F8</color>
+    <color name="blackShade">#070707</color>
+    <color name="red">#EA0D13</color>
+    <color name="golden">#FF8F00</color>
+    <color name="green">#4CAF50</color>
+    <color name="darkGrey">#6A6A6A</color>
+
+    <color name="plainWhite">#FFFFFFFF</color>
+
+</resources>

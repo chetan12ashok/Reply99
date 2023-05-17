@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Watomatic</string>
+    <string name="about">Über Watomatic</string>
+    <string name="settings">Einstellungen</string>
+    <string name="privacy_policy_label">Datenschutzerklärung</string>
+    <string name="service_name">Benachrichtigungs-Listener</string>
+    <string name="mainAutoReplyTextPlaceholder">(Eigene Antwort)</string>
+    <string name="auto_reply_default_message">Automatische Antwort\n⚠️ Benutzer nicht verfügbar</string>
+    <string name="mainAutoReplyLabel">Text für automatische Antwort</string>
+    <string name="mainAutoReplySwitchOffLabel">Automatische Antwort AUS</string>
+    <string name="mainAutoReplySwitchOnLabel">Automatische Antwort EIN</string>
+    <string name="mainAutoReplyEditBtnTooltip">Tippe, um den Antworttext zu bearbeiten</string>
+    <string name="to_help_you_leave_whatsapp">Antworte automatisch, um WhatsApp und den Facebook Messenger schneller zu verlassen.</string>
+    <string name="decline">Ablehnen</string>
+    <string name="accept">Zustimmen</string>
+    <string name="sure">Ich bin mir sicher</string>
+    <string name="retry">Wiederholen</string>
+    <string name="permission_dialog_title">Erforderliche Berechtigung</string>
+    <string name="permission_dialog_msg">Diese App benötigt Zugriff auf die Benachrichtigungen, um zu funktionieren.</string>
+    <string name="permission_dialog_denied_title">Berechtigungen verweigert</string>
+    <string name="permission_dialog_denied_msg">Ohne diese Berechtigung kann die App nicht automatisch auf die Benachrichtigungen antworten. Bist du sicher, dass du die Berechtigung verweigern möchtest?</string>
+    <!-- Select apps to auto reply -->
+    <string name="enable_for_apps">Für folgende Apps aktivieren</string>
+    <string name="enable_auto_reply_switch_msg">Automatische Antwort-Schalter zuerst aktivieren.</string>
+    <string name="error_atleast_single_app_must_be_selected">Fehler: Wähle mindestens eine App aus</string>
+    <!-- Group chats -->
+    <string name="groupReplySwitchLabel">Automatische Antwort für Gruppenchats</string>
+    <string name="group_reply_on_info_message">Automatische Antwort für Gruppenchats EIN</string>
+    <string name="group_reply_off_info_message">Automatische Antwort für Gruppenchats AUS</string>
+    <string name="time_picker_title">Antwort-Häufigkeit (BETA)</string>
+    <string name="time_picker_sub_title_default">Auf alle Nachrichten ohne Limit antworten</string>
+    <string name="time_picker_sub_title">Nur einmal alle %1$d Tag(e) je Chat</string>
+    <string name="time_format_placeholder">00:00</string>
+    <string name="time_picker_edit_btn_tooltip">Tippe, um die Zeitverzögerung zwischen Antworten zu bearbeiten</string>
+    <string name="app_version">v%1$s</string>
+    <!-- Custom message editor -->
+    <string name="save">Speichern</string>
+    <string name="tip_view_messages_from_fellow_users">🦩 <u>Vorlagen aus der Community ansehen und eigene teilen ➚</u></string>
+    <string name="append_watomatic_arribution_checkbox_label">Watomatic-Link anhängen, um uns zu unterstützen. Danke!</string>
+    <string name="sent_using_Watomatic">Gesendet mit watomatic.app</string>
+    <string name="share_app_text">Ich benutze Watomatic, um mich von WhatsApp zu lösen. Probiere es aus: watomatic.app</string>
+    <string name="share">Teilen</string>
+    <string name="share_subject">Watomatic: Automatische Antwort für WhatsApp</string>
+    <string name="watomatic_community_label"><u>Community</u></string>
+    <string name="watomatic_subreddit_label"><u>Lass uns diskutieren\nr/watomatic</u></string>
+    <string name="watomatic_whatsnew_label">Was ist neu?</string>
+    <!-- Share debug logs -->
+    <!-- keys and app internal strings -->
+    <!-- app settings -->
+    <string name="show_notification_label">Benachrichtigung für beantwortete Nachrichten anzeigen</string>
+    <string name="preference_category_general_label">Allgemeine Einstellungen</string>
+    <string name="preference_category_notifications_label">Benachrichtigungen</string>
+    <string name="preference_category_troubleshooting_label">Fehlersuche und -behebung</string>
+    <string name="enable_auto_start_label">Auto-Start aktivieren</string>
+    <string name="add_attribution_label">Attribut hinzufügen</string>
+    <string name="enabled_apps_title">Aktivierte Apps</string>
+    <string name="always_on_notification">Ständige Benachrichtigungen</string>
+    <string name="display_persistent_notification_summary">Zeigt eine dauerhafte Benachrichtigung an, um sicherzustellen, dass Watomatic nicht vom System beendet wird</string>
+    <string name="enable_auto_start_summary">Einige Geräte könnten es erfordern, Auto-Start in den Geräteeinstellungen für Watomatic manuell zu aktivieren</string>
+    <!-- Local language names (non translatable) -->
+    <!-- Basque -->
+    <!-- Language codes (non translatable) -->
+    <!-- App Language selection -->
+    <string name="app_language">App-Sprache</string>
+    <!-- App Rating Dialog -->
+    <string name="app_rating_dialog_title">Was hältst du davon?</string>
+    <string name="app_rating_dialog_msg">Wir möchten gerne wissen, was du von der App hältst. Tippe auf die Sterne oben, um sie zu bewerten.</string>
+    <string name="app_rating_dialog_rate_button_title">App bewerten!</string>
+    <string name="app_rating_dialog_rate_later_title">Vielleicht später</string>
+    <string name="app_rating_goto_store_dialog_title">Wir sind glücklich!</string>
+    <string name="app_rating_goto_store_dialog_msg">Bitte teilen Sie diese Bewertung unserer App im Google Play Store mit, indem Sie auf \"Weiter\" tippen!</string>
+    <string name="app_rating_pitch">Diese App ist kostenlos, ohne Werbung, ohne Verfolgung, Open Source und wird von Mitwirkenden wie du und mir entwickelt.
+        Dein Feedback ist unsere einzige Ermutigung.</string>
+    <string name="app_rating_goto_store_dialog_button1_title">Nicht interessiert</string>
+    <string name="app_rating_goto_store_dialog_button2_title">Weiter</string>
+    <string name="app_rating_feedback_dialog_title">Kontakt aufnehmen</string>
+    <string name="app_rating_feedback_dialog_msg">Lass uns wissen, wie wir uns verbessern können.</string>
+    <string name="app_rating_feedback_dialog_mail_button_title">Schick uns eine E-Mail</string>
+    <string name="app_rating_feedback_dialog_telegram_button_title">Telegram</string>
+    <!--Autostart Permission Dialog-->
+    <string name="auto_start_permission_dialog_title">Auto-Start Berechtigung</string>
+    <string name="running_in_the_background">Läuft im Hintergrund</string>
+    <string name="auto_start_permission_dialog_message">Erlaube die Auto-Start Berechtigung in den Geräteeinstellungen, um Watomatic automatisch zu starten.</string>
+    <string name="device_based_settings_message">Beachte: Einstellungen können variieren oder auf deinem Gerät nicht verfügbar sein</string>
+    <string name="setting_not_available_for_device">Diese Einstellung ist nicht verfügbar oder wird für dein Gerät möglicherweise nicht benötigt.</string>
+    <string name="enable_auto_start_setting">Weiter</string>
+    <string name="decline_auto_start_setting">Abbrechen</string>
+    <string name="app_not_installed_text">Nicht installiert</string>
+    <string name="advanced_settings">Erweiterte Einstellungen</string>
+    <string name="contact_based_reply">Kontakt-basierte Antworten</string>
+    <string name="contact_reply_type">Antwort an</string>
+    <string name="blacklist">Jeder außer ausgewählte Kontakte</string>
+    <string name="whitelist">Niemand außer ausgewählte Kontakte</string>
+    <string name="enable_contact_based_reply">Kontakt-basierte Antworten aktivieren</string>
+    <string name="select_contacts">Kontakte auswählen</string>
+    <string name="contact_selector">Kontaktauswahl</string>
+    <string name="select_all">Alle auswählen</string>
+    <string name="select_none">Keine auswählen</string>
+    <string name="contact_permission_dialog_msg">Der Lesezugriff auf die Kontakte ist erforderlich, um Namen zu filtern und diese Funktion zu aktivieren. Möchten Sie fortfahren?</string>
+    <string name="contact_permission_dialog_proceed">Weiter</string>
+    <string name="contact_permission_dialog_cancel">Abbrechen</string>
+    <string name="undo">Rückgängig machen</string>
+    <string name="all_contacts_selected">Alle Kontakte ausgewählt</string>
+    <string name="all_contacts_unselected">Alle Kontakte nicht ausgewählt</string>
+    <string name="donations_activity_title">Spenden</string>
+    <string name="donations_data_fetch_error">Neueste Daten können nicht abgerufen werden</string>
+    <string name="donations_goal_title_0">Schwierig</string>
+    <string name="donations_goal_0">Jeder Cent zählt, beim Überleben zu helfen</string>
+    <string name="donations_goal_title_20">Nur überleben</string>
+    <string name="donations_goal_20">Unterstützt tägliche Wartung und wichtige Korrekturen</string>
+    <string name="donations_goal_title_30">Stabil</string>
+    <string name="donations_goal_30">Schnellere Fehlerbehebungen und aktuell halten</string>
+    <string name="donations_goal_title_70">Langsamer und stetiger Fortschritt</string>
+    <string name="donations_goal_70">Kleinere Funktionen und Verbesserungen der Benutzeroberfläche</string>
+    <string name="donations_goal_title_100">Boost-Modus</string>
+    <string name="donations_goal_100">Hilf uns, es zu einer leistungsstarken Auto-Antwort-App mit vielen modernen Funktionen zu machen</string>
+    <string name="donation_progress_label">des monatlichen Ziels</string>
+    <string name="add_custom_contact">Eigenen Kontaktnamen hinzufügen</string>
+    <string name="contact_permission_suggestion_dialog_msg">Der Lesezugriff für Kontakte ist erforderlich, um Antworten nach Kontaktnamen zu filtern. Wenn der Zugriff nicht aktiviert ist, sind nur manuell eingegebene Namen erlaubt. Möchten Sie ihn aktivieren?</string>
+    <string name="contact_permission_dialog_enable_permission">Berechtigung für Kontakte aktivieren</string>
+    <string name="contact_permission_dialog_not_now">Jetzt nicht</string>
+    <string name="contact_permission_dialog_title">Lesezugriff für Kontakt</string>
+    <string name="delete">Löschen</string>
+    <string name="decrease_frequency">Häufigkeit verringern</string>
+    <string name="increase_frequency">Häufigkeit erhöhen</string>
+    <string name="current_donation_progress">Aktueller Spendenfortschritt</string>
+    <string name="error_name_cannot_be_blank">Name darf nicht leer sein</string>
+    <string name="error_name_cannot_be_duplicate">Name bereits vorhanden</string>
+</resources>
